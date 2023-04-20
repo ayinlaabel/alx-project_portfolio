@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
 import { handleGetProducts } from "../hooks/get-all-product";
 import { product } from "../types/product";
+import Hero from "../components/Hero";
 
 const Home = () => {
   const [products, setProducts] = useState<product[]>();
@@ -19,6 +20,12 @@ const Home = () => {
   }, [products]);
   return (
     <div className="mb-[10rem] mt-[10px]">
+      <div>
+        <Hero />
+      </div>
+      <div className="px-[10rem]">
+        <div className="w-full h-[1px] bg-[#f9f9f9] mt-4 mb-4"></div>
+      </div>
       <div className="flex px-1 flex-wrap justify-center">
         {products &&
           products.map((product) => (

@@ -6,6 +6,9 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SingleProdocut from "./pages/SingleProduct";
+import ProductCategory from "./pages/ProductCategory";
+import Login from "./pages/Login.";
+import Register from "./pages/Register";
 
 function App() {
   return (
@@ -14,8 +17,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="products/:id" element={<SingleProdocut />} />
-        <Route path="login" element={<SingleProdocut />} />
-        <Route path="register" element={<SingleProdocut />} />
+        <Route path=":category" element={<ProductCategory />} />
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
       </Routes>
       <Footer />
     </BrowserRouter>
